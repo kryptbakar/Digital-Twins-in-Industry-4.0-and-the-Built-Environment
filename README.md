@@ -2,6 +2,9 @@
 
 ![Status](https://img.shields.io/badge/Status-Research%20Repository-blue)
 
+## Project Description
+Research artifact examining Digital Twin security in Industry 4.0 - covering attack surfaces, adversary models, threat vectors, and defensive architecture strategies.
+
 ---
 
 ## 🚀 Project Overview
