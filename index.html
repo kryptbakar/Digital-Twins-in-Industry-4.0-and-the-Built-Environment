@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Twins in Industry 4.0 and the Built Environment</title>
+<meta name="description" content="A research deep dive into security architectures, advanced threats, and defensive strategies for Digital Twins in Industry 4.0 and the built environment.">
+<style>
+  :root {
+    --bg: #faf8f4;
+    --bg-alt: #f1ede4;
+    --text: #211f1c;
+    --text-muted: #5b564d;
+    --accent: #8a3b12;
+    --accent-2: #1f4b3f;
+    --border: #ddd5c6;
+    --card-bg: #ffffff;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #16150f;
+      --bg-alt: #1e1c15;
+      --text: #ece7db;
+      --text-muted: #b3ac9c;
+      --accent: #e08a52;
+      --accent-2: #6fb89a;
+      --border: #35322a;
+      --card-bg: #1c1b15;
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Georgia", "Iowan Old Style", "Palatino Linotype", serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  header.hero {
+    padding: 5rem 0 3.5rem;
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, var(--bg-alt), var(--bg));
+  }
+
+  .eyebrow {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 1.1rem;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 4.2vw, 3rem);
+    line-height: 1.15;
+    margin: 0 0 1.1rem;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .tagline {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 46ch;
+    margin: 0;
+  }
+
+  main { padding: 3.5rem 0 1rem; }
+
+  section { margin-bottom: 3.25rem; }
+
+  h2 {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--accent-2);
+    font-weight: 700;
+    margin: 0 0 1.25rem;
+  }
+
+  .about p {
+    font-size: 1.08rem;
+    margin: 0 0 1rem;
+    color: var(--text);
+  }
+
+  .topics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (max-width: 620px) {
+    .topics { grid-template-columns: 1fr; }
+  }
+
+  .topics li {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.1rem 1.25rem;
+  }
+
+  .topics strong {
+    display: block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.35rem;
+    color: var(--accent);
+  }
+
+  .topics span {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+  }
+
+  .cta {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background: var(--bg-alt);
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+
+  .cta p {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-muted);
+    margin: 0 0 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-weight: 600;
+    font-size: 1.05rem;
+    text-decoration: none;
+    color: #fff;
+    background: var(--accent);
+    padding: 0.9rem 2rem;
+    border-radius: 6px;
+    letter-spacing: 0.01em;
+    transition: opacity 0.15s ease;
+  }
+
+  .btn:hover { opacity: 0.85; }
+
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 2.5rem 0 3.5rem;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  footer a {
+    color: var(--accent-2);
+    text-decoration: none;
+  }
+
+  footer a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Research Artifact &middot; Cyber-Physical Systems Security</div>
+    <h1>Digital Twins in Industry 4.0 and the Built Environment</h1>
+    <p class="tagline">A deep dive into security architectures, advanced threats, and defensive strategies for digital twins across smart manufacturing and smart buildings.</p>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+
+    <section class="about">
+      <h2>Abstract</h2>
+      <p>Digital twins increasingly serve as the control-plane mirror of real-world industrial and building systems, synchronizing IoT and OT telemetry to drive optimization, predictive maintenance, and automation. This paper examines how that same synchronization expands the attack surface of cyber-physical systems &mdash; from data poisoning and IoT endpoint compromise to supply-chain and model-inversion risks.</p>
+      <p>It surveys secure digital-twin design principles across identity, network, data, and runtime layers, then maps them to concrete defensive strategies: continuous monitoring, anomaly detection, and incident response tailored to environments where a compromised twin can translate into physical-world disruption.</p>
+    </section>
+
+    <section class="topics-section">
+      <h2>Key Topics Covered</h2>
+      <ul class="topics">
+        <li><strong>Digital Twins</strong><span>Lifecycle, synchronization models, and benefits vs. operational/security tradeoffs.</span></li>
+        <li><strong>Industry 4.0 Integration</strong><span>IoT/OT convergence, real-time telemetry, predictive analytics, and supply-chain dependencies.</span></li>
+        <li><strong>Built Environment Use Cases</strong><span>Smart building automation, infrastructure monitoring, and energy/occupancy control.</span></li>
+        <li><strong>Security Architectures</strong><span>Identity and access control, encryption, and network segmentation for twin components.</span></li>
+        <li><strong>Advanced Threats</strong><span>Telemetry data poisoning, model inversion/leakage, endpoint compromise, and supply-chain attacks.</span></li>
+        <li><strong>Defensive Strategies</strong><span>Anomaly detection, behavioral baselines, incident response, and risk mitigation frameworks.</span></li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <p>The complete research paper, including case studies and threat-landscape analysis, is available as a PDF.</p>
+      <a class="btn" href="https://github.com/kryptbakar/Digital-Twins-in-Industry-4.0-and-the-Built-Environment/blob/main/Digital%20Twins%20in%20Industry%204.0%20and%20the%20Built%20Environment%20A%20Deep%20Dive%20into%20Security%20Architectures%2C%20Advanced%20Threats%2C%20and%20Defensive%20Strategies.pdf">Read the full paper (PDF)</a>
+    </section>
+
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a href="https://github.com/kryptbakar/Digital-Twins-in-Industry-4.0-and-the-Built-Environment">View the repository on GitHub</a>
+  </div>
+</footer>
+
+</body>
+</html>
